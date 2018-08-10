@@ -1,0 +1,41 @@
+Para esta atividade foi utilizada a ferramente Eclipse, e criado um projeto Java, com dependências Maven do Twitter4J (twitter4j-core-4.0.4.jar, twitter4j-media-support-4.0.4, twitter4j-stream-4.0.4 e twitter4j-async-4.0.4).
+
+
+pacote br.com.fiap.acoes
+Pacote separado para classes com objetivo de manipular algo.
+
+Interface ExecutarAcao
+Um contrato para todas as ações que serão desenvolvidas no projeto.
+
+Classe Buscar
+Implementa a interface ExecutarAcao para a implementação de uma ação, que neste caso é a de buscar uma hashtag.
+
+Método executaAcao
+Realiza a busca da hashtag especificada.
+
+Classe Postar
+Implementa a interface ExecutarAcao para a implementação de uma ação, que neste caso é de postar um novo tweet.
+
+Método executaAcao
+Posta um novo tweet.
+
+pacote br.com.fiap.app
+Pacote separado para classes com objetivo de executar o projeto.
+
+Classe MainApp
+Executa a aplicação
+
+Método buscar
+Inicia a chamada do processo de buscar tweets
+
+Metodo postar
+Inicia a chamada do processo de postar um novo tweet
+
+pacote br.com.fiap.helpers
+Pacote separado para classes com objetivo de auxiliar no desenvolvimento da processo.
+
+Classe Acesso
+Inicia o acesso com o Twitter4J
+
+metodo recuperaContextoTwitter
+Verifica se já existe um acesso aberto, caso não exista, ele efetua uma nova conexão
