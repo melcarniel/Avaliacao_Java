@@ -9,13 +9,12 @@ import twitter4j.auth.AccessToken;
 public class Postar implements ExecutarAcao{
 
 	@Override
-	public void executaAcao() {
+	public void executaAcao(String tweet) {
 				
-		try {
-			Twitter twitter = Acesso.recuperaContextoTwitter();
-						
-			Status status = twitter.updateStatus("@carolina_abr oi!");
-			System.out.println("Tweet postado com sucesso![" + status.getText() + "].");
+		try { 
+			Twitter twitter = Acesso.recuperaContextoTwitter();						
+			twitter.updateStatus(tweet);
+			System.out.println("Tweet postado com sucesso!");
 			
 		} catch (Exception e) {
 			e.printStackTrace();

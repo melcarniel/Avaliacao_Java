@@ -6,24 +6,22 @@ import br.com.fiap.acoes.Postar;
 
 public class MainApp {
 
-	public static void main(String[] args) {
-		
-		buscar("#java9");
-		postar();
-
+	public static void main(String[] args) {		
+		postar(buscar("#java9"));
 	}
 	
-	private static void buscar(String hashtag) {
+	private static String buscar(String hashtag) {
 	
 		Buscar acao = new Buscar();
-		acao.setHashtag(hashtag);
-		acao.executaAcao();
+		acao.executaAcao(hashtag);
+		return acao.getTweet().toString();
 		
 	}
 	
-	private static void postar() {
+	private static void postar(String tweet) {
 		Postar acao = new Postar();
-		acao.executaAcao();
+		
+		acao.executaAcao(tweet);
 	}
 
 }
